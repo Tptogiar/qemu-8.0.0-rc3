@@ -1853,7 +1853,7 @@ ERST
        .name       = "hello-world",
        .args_type  = "message:s?",
        .params     = "hello-world [message]",
-       .help       = "Print message to the standard output",
+       .help       = "Print message to the standard output  --from hmp-commands.hx",
        .cmd        = hmp_hello_world,
    },
 
