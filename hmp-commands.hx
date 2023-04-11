@@ -1846,3 +1846,18 @@ SRST
   List event channels in the guest
 ERST
 #endif
+
+
+
+   {
+       .name       = "hello-world",
+       .args_type  = "message:s?",
+       .params     = "hello-world [message]",
+       .help       = "Print message to the standard output",
+       .cmd        = hmp_hello_world,
+   },
+
+SRST
+``hello_world`` *message*
+  Print message to the standard output
+ERST

@@ -24,7 +24,7 @@ rcq:
                 -chardev socket,id=qmp,port=4444,host=localhost,server=on \
                 -mon chardev=qmp,mode=control,pretty=on \
                 -vnc 192.168.182.10:68 \
-                -monitor stdio
+		-monitor stdio
 #-cdrom CentOS-8.4.2105-x86_64-dvd1.iso \
 
 

@@ -443,3 +443,16 @@ void hmp_info_mtree(Monitor *mon, const QDict *qdict)
 
     mtree_info(flatview, dispatch_tree, owner, disabled);
 }
+
+
+
+void hmp_hello_world(Monitor *mon, const QDict *qdict)
+{
+    const char *message = qdict_get_try_str(qdict, "message");
+    Error *err = NULL;
+
+    qmp_hello_world(message, &err);
+    if (hmp_handle_error(mon, err)) {
+        return;
+    }
+}

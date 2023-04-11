@@ -209,3 +209,17 @@ static void __attribute__((__constructor__)) monitor_init_qmp_commands(void)
                          qmp_marshal_qmp_capabilities,
                          QCO_ALLOW_PRECONFIG, 0);
 }
+
+
+void qmp_hello_world(const char *message, Error **errp)
+{
+    if (message) {
+        if (strstr(message, "love")) {
+            error_setg(errp, "the word 'love' is not allowed");
+            return;
+        }
+        printf("args: %s\n", message);
+    } else {
+        printf("Hello, world! --from qmp-cmds.c\n");
+    }
+}
